@@ -7,18 +7,6 @@ import jwt, { JwtPayload, Secret } from "jsonwebtoken";
 import ejs from "ejs";
 import path from "path";
 import sendMail from '../utils/sendMail';
-import {
-  accessTokenOptions,
-  refreshTokenOptions,
-  sendToken,
-} from "../utils/jwt";
-import { redis } from "../utils/redis";
-import {
-  getAllUsersService,
-  getUserById,
-  updateUserRoleService,
-} from "../services/user.service";
-import cloudinary from "cloudinary";
 
 // register user
 interface IRegistrationBody {
